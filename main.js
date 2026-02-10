@@ -3,10 +3,7 @@ import { load } from "@std/dotenv";
 
 await load({ export: true });
 
-const apiKey =
-  Deno.env.get("GOOGLE_GENAI_API_KEY") ??
-  Deno.env.get("GEMINI_API_KEY") ??
-  Deno.env.get("GOOGLE_API_KEY");
+const apiKey =  Deno.env.get("GOOGLE_GENAI_API_KEY") 
 
 if (!apiKey) {
   throw new Error(
@@ -19,9 +16,9 @@ const ai = new GoogleGenAI({ apiKey });
 async function main() {
   const response = await ai.models.generateContent({
     model: "gemini-3-flash-preview",
-    contents: "Explain how AI works in a few words",
+    contents: "what is a horse? in super short.",
   });
-  console.log(response.text);
+  console.log(222, response.text);
 }
 
 await main();

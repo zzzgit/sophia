@@ -1,9 +1,10 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-read --allow-net --allow-env=GOOGLE_SDK_NODE_LOGGING,GOOGLE_API_KEY,GOOGLE_GENAI_API_KEY,GEMINI_API_KEY,GOOGLE_CLOUD_PROJECT,GOOGLE_GENAI_USE_VERTEXAI,WS_NO_BUFFER_UTIL main.js"
+    "dev": "deno run -A main.js"
   },
   "imports": {
     "@google/genai": "npm:@google/genai@^1.40.0",
-    "@std/assert": "jsr:@std/assert@1"
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.6"
   }
 }
