@@ -11,12 +11,12 @@ if (!apiKey) {
   );
 }
 
-const ai = new GoogleGenAI({ apiKey });
+const ai = new GoogleGenAI({apiKey});
 
 async function main() {
   const response = await ai.models.generateContent({
-    model: "gemini-3-flash-preview",
-    contents: "what is a horse? in super short.",
+    model: "gemini-2.5-flash-lite",
+    contents: "What is temperature in LLM?",
   });
   console.log(222, response.text);
 }
